@@ -1,0 +1,599 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.proyecto {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* habilidades */
+
+.habilidades-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.habilidades-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.habilidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.habilidad {
+    max-width: 250px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.habilidad h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.habilidad p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* CONTACTO */
+#contacto {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-top: 2px solid #ddd;
+    text-align: center;
+}
+
+#contacto h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.contacto-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Colores característicos por tipo de contacto */
+.contacto-iconos a[href*="mailto"] {
+    color: #D44638; /* Gmail rojo */
+}
+
+.contacto-iconos a[href*="wa.me"],
+.contacto-iconos a[href*="whatsapp"] {
+    color: #25D366; /* WhatsApp verde */
+}
+
+.contacto-iconos a[href*="linkedin"] {
+    color: #0077B5; /* LinkedIn azul */
+}
+
+.contacto-iconos a[href*="github"] {
+    color: #000000; /* GitHub negro */
+}
+
+/* Animación al pasar el mouse */
+.contacto-iconos a {
+    font-size: 3.5rem;
+    color: #0077cc;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacto-iconos a:hover {
+    transform: scale(1.2);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+
+/* Botón CV */
+.btn-cv {
+    display: inline-block;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cv:hover {
+    background-color: #005fa3;
+}
+
+/* FORMULARIO DE CONTACTO */
+form {
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* educacion */
+.educacion-section {
+    padding: 50px 20px;
+    background-color: #ffffff; /* blanco para que combine con las otras secciones */
+    text-align: center;
+}
+
+.educacion-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #222;
+    position: relative;
+    z-index: 10;
+}
+
+/* timeline base */
+.timeline {
+    display: flex;
+    justify-content: flex-start; /* mejor alinear a la izquierda para scroll */
+    gap: 40px;
+    position: relative;
+    padding-bottom: 60px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* línea horizontal */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background-color: #00bcd4;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* eventos */
+.evento {
+    position: relative;
+    flex: 0 0 auto;
+    width: 220px;
+    text-align: center;
+    z-index: 10;
+    background: #fafafa;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+/* puntos */
+.punto {
+    width: 20px;
+    height: 20px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #00bcd4;
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+/* info */
+.info {
+    margin-top: 70px;
+}
+
+.info h3 {
+    font-size: 1rem;
+    color: #111;
+    margin-bottom: 0.3rem;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Scroll horizontal para móviles */
+.timeline::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background-color: #00bcd4;
+    border-radius: 4px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+
+/* Responsive para tablets y móviles */
+@media (max-width: 768px) {
+    .timeline {
+        gap: 30px;
+        padding-bottom: 40px;
+        justify-content: flex-start;
+    }
+
+    .evento {
+        width: 200px;
+        margin: 0 8px;
+    }
+
+    .info h3 {
+        font-size: 0.95rem;
+    }
+
+    .info p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive para móviles muy pequeños */
+@media (max-width: 480px) {
+    /* Cambiar la timeline a columna vertical */
+    .timeline {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    .evento {
+        width: 100%;
+        max-width: 320px;
+        margin: 1rem auto;
+        text-align: left;
+        padding-left: 2.5rem;
+        position: relative;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .punto {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        transform: none;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .info {
+        margin-top: 0;
+    }
+    
+    .info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .info p {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE ADICIONALES */
+@media (max-width: 600px) {
+    .evento {
+        width: 180px;
+        margin: 0 10px;
+    }
+
+    .info h3 {
+        font-size: 0.9rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #contacto form {
+        padding: 0 1rem;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1rem;
+    }
+
+    /* Este ajuste hace que el botón CV tome 100% ancho en móviles */
+    .btn-cv {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.8rem 1rem;
+    }
+}
+
+/*presentación*/
+
+/* PRESENTACIÓN */
+.presentacion-section {
+    padding: 80px 20px;
+    background-color: #fdfdfd;
+  }
+  
+.presentacion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    /* INICIAL: oculto y abajo para animar */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+  
+.presentacion-foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+  
+.presentacion-info {
+    max-width: 600px;
+    text-align: left;
+}
+  
+.presentacion-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+  
+.presentacion-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+  
+.presentacion-info p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+  
+/* Botón CV reutiliza .btn-cv ya definido en tu archivo */
+
+/* Responsive presentación */
+@media screen and (max-width: 768px) {
+    .presentacion-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .presentacion-info {
+        text-align: center;
+    }
+  
+    .presentacion-foto img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Animación de aparición para presentación */
+.presentacion-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Almada Nahuel</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#educacion">Educación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+      
+
+      <section id="presentacion" class="presentacion-section">
+        <div class="presentacion-container">
+          <div class="presentacion-foto">
+            <img src="/assets/tu-foto.jpg" alt="Foto de Nahuel Almada">
+          </div>
+          <div class="presentacion-info">
+            <h2>¡Hola! Soy Nahuel</h2>
+            <h3>Desarrollador Web</h3>
+            <p>
+              Soy un desarrollador web enfocado en crear soluciones funcionales y modernas. Me especializo en desarrollo backend con PHP, manejo de bases de datos y maquetado responsivo. Apasionado por la tecnología y en constante aprendizaje.
+            </p>
+            <a href="CV-Nahuel-Almada.pdf" class="btn-cv" download>Descargar CV</a>
+          </div>
+        </div>
+      </section>
+      
+
+  <section id="habilidades" class="habilidades-section">
+    <h2>Habilidades</h2>
+    <div class="habilidades-grid">
+  
+      <!-- Bloque Data Bases -->
+      <div class="habilidad">
+        <div class="icono">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Data Bases</h3>
+        <p>SQL, NoSQL, MySQL, Microsoft SQL Server</p>
+      </div>
+  
+      <!-- Bloque PHP Developer -->
+      <div class="habilidad">
+        <div class="icono">
+          <i class="fab fa-php"></i>
+        </div>
+        <h3>PHP Developer</h3>
+        <p>Laravel, Composer, Apache, REST APIs, PHPUnit</p>
+      </div>
+  
+      <!-- Bloque GitHub -->
+      <div class="habilidad">
+        <div class="icono">
+          <i class="fab fa-github"></i>
+        </div>
+        <h3>GitHub</h3>
+        <p>Repositorios, Branching, Pull Requests, Merge, Versionado</p>
+      </div>
+  
+      <!-- Bloque Frontend Developer -->
+      <div class="habilidad">
+        <div class="icono">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Frontend Developer</h3>
+        <p>HTML5, CSS3, JavaScript ES6+, Responsive Design, Accesibilidad</p>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+    <div class="proyectos-grid">
+      <!-- Cada proyecto como una card -->
+      <div class="proyecto">
+        <img src="assets/proyectos/proyecto1.png" alt="Proyecto 1">
+        <h3>Nombre del Proyecto</h3>
+        <p>Descripción corta del proyecto.</p>
+        <a href="https://github.com/usuario/proyecto1" target="_blank">Ver en GitHub</a>
+      </div>
+      <!-- Más proyectos... -->
+    </div>
+  </section>
+
+  <section id="educacion" class="educacion-section">
+    <h2>Educación</h2>
+    <div class="timeline">
+      <div class="evento">
+        <div class="punto"></div>
+        <div class="info">
+          <h3>Técnico Informático</h3>
+          <p>2013 - 2019</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="punto"></div>
+        <div class="info">
+          <h3>Curso de Ciberseguridad - Cisco Networking Academy</h3>
+          <p>2020 - 2021</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="punto"></div>
+        <div class="info">
+          <h3>Curso de JavaScript - Cisco Networking Academy</h3>
+          <p>2021 - 2022</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="punto"></div>
+        <div class="info">
+          <h3>Técnicatura en Análisis de Sistemas Informáticos</h3>
+          <p>2021 - 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+    <!-- Sección de Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés hablar de un proyecto o colaborar? Podés contactarme por:</p>
+
+    <div class="contacto-iconos">
+        <a href="mailto:nahuelalmada0900@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/5493758556569" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/nahuel-almada-850b9836b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/NahuelAF" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+  
+    <form action="https://formspree.io/f/movljovr" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="message" rows="4" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+  
+      
+    
+  <footer>
+    <p>&copy; 2025 Nahuel Almada</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
