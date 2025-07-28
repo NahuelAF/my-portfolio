@@ -723,3 +723,61 @@ form button:hover {
     }
   }
   
+/* ==== HABILIDADES ==== */
+#habilidades {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  #habilidades h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .icon-item {
+    background-color: #e0f4ff; /* celeste claro */
+    border: 2px solid #66b3ff; /* azul medio */
+    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: default;
+  }
+  
+  .icon-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-item img,
+  .icon-item i {
+    width: 36px;
+    height: 36px;
+  }
+  
+  @media (max-width: 500px) {
+    .icon-item {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .icon-item img,
+    .icon-item i {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  
