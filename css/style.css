@@ -727,6 +727,7 @@ form button:hover {
 #habilidades {
     padding: 2rem 1rem;
     text-align: center;
+    background-color: #fff;
   }
   
   .skills-container {
