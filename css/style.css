@@ -725,59 +725,64 @@ form button:hover {
   
 /* ==== HABILIDADES ==== */
 #habilidades {
-    padding: 40px 20px;
+    padding: 2rem 1rem;
     text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  #habilidades h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
   }
   
   .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
   
   .icon-item {
-    background-color: #e0f4ff; /* celeste claro */
-    border: 2px solid #66b3ff; /* azul medio */
+    background-color: #e0f0ff;
+    border: 2px solid #80caff;
     border-radius: 12px;
-    width: 80px;
-    height: 80px;
+    padding: 1rem;
+    width: 110px;
+    height: 110px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: default;
+    transition: transform 0.2s;
   }
   
   .icon-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
   }
   
-  .icon-item img,
-  .icon-item i {
-    width: 36px;
-    height: 36px;
+  .icon-item i,
+  .icon-item img {
+    font-size: 2.5rem;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+    filter: none;
   }
   
-  @media (max-width: 500px) {
-    .icon-item {
-      width: 60px;
-      height: 60px;
-    }
-  
-    .icon-item img,
-    .icon-item i {
-      width: 28px;
-      height: 28px;
-    }
+  .icon-item span {
+    font-size: 0.85rem;
+    font-weight: 600;
   }
   
+  /* Estilos por tecnología */
+  .icon-item.html i { color: #e44d26; }
+  .icon-item.css i { color: #264de4; }
+  .icon-item.js i { color: #f7df1e; }
+  .icon-item.php i { color: #8892BF; }
+  .icon-item.wordpress i { color: #21759b; }
+  .icon-item.mysql i { color: #00758f; }
+  .icon-item.git i { color: #f05033; }
+  .icon-item.github i { color: #181717; }
+  
+  /* Corrección específica para que el icono PHP se vea bien en PC */
+  .icon-item.php img {
+    width: 48px;
+    height: 48px;
+  }
+    
