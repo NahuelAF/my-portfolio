@@ -94,24 +94,7 @@ section {
   padding: 5rem 2rem 2rem;
 }
 
-.proyectos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
 
-.proyecto {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.proyecto img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
 
 /* HABILIDADES */
 .habilidades-section {
@@ -411,9 +394,11 @@ form button:hover {
 
 /* Sección Proyectos */
 #proyectos {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 4rem;
   text-align: center;
   background-color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #proyectos h2 {
@@ -425,8 +410,9 @@ form button:hover {
 /* Contenedor grid para proyectos */
 .proyectos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  align-items: start;
 }
 
 /* Tarjeta individual de proyecto */
@@ -438,7 +424,7 @@ form button:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .proyecto:hover {
@@ -446,45 +432,100 @@ form button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagen del proyecto con efecto hover */
 .proyecto img {
   width: 100%;
-  max-height: 160px;
-  object-fit: contain;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.proyecto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Título del proyecto */
 .proyecto h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #222;
 }
 
+/* Tecnologías */
 .tecnologias {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tecnologias i {
-  font-size: 1.5rem;
-  margin: 0 0.3rem;
+  font-size: 2rem;
   color: #00618A;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
+.tecnologias i:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip para tecnologías */
+.tecnologias i[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00618A;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tecnologias i:hover::after {
+  opacity: 1;
+}
+
+/* Descripción del proyecto */
 .proyecto p {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #444;
+  line-height: 1.4;
+  max-height: 4.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Enlaces */
+.enlaces {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .enlaces a {
-  font-size: 1.4rem;
-  margin: 0 0.5rem;
+  font-size: 2rem;
   color: #444;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .enlaces a:hover {
   color: #00618A;
+  transform: scale(1.2);
 }
 
 /* Responsive para móvil */
@@ -504,7 +545,16 @@ form button:hover {
   .proyecto p {
     font-size: 0.95rem;
   }
+
+  .tecnologias i {
+    font-size: 1.6rem;
+  }
+
+  .enlaces a {
+    font-size: 1.6rem;
+  }
 }
+
 
 /* ==== HABILIDADES ==== */
 #habilidades {
